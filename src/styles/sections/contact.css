@@ -1,0 +1,109 @@
+/* ========================= CONTACT SECTION ========================= */
+
+.contact {
+  background-color: #000;
+  padding: 4rem 0;               /* bigger section */
+  position: relative;
+  max-width: 100%;
+}
+
+.contact__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  position: relative;
+}
+
+/* IMAGE IN FRONT OF THE CARD */
+.contact__image-box {
+  position: relative;
+  z-index: 3;                   /* image is in front */
+  
+  transform: translateX(40px);  /* moves image OVER the white card */
+}
+
+.contact__image {
+  width: 420px;                 /* bigger image */
+  height: 320px;               
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+
+/* WHITE CARD BEHIND */
+.contact__card {
+  position: relative;
+  z-index: 1;                   /* behind the image */
+  background-color: #ffffff;
+  color: #000;
+  
+  padding: 3.2rem 3.5rem;
+  width: 420px;
+  min-height: 370px;
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+.contact__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* ROWS */
+.contact__row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.contact__icon {
+  font-size: 1.6rem;
+}
+
+.contact__text {
+  color: inherit;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 900px) {
+
+  .contact__wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact__image-box {
+    transform: translateX(0);    /* reset overlap */
+    z-index: 3;
+  }
+
+  .contact__image {
+    width: 100%;
+    max-width: 360px;
+    height: 260px;
+  }
+
+  .contact__card {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__title {
+    font-size: 1.6rem;
+  }
+
+  .contact__text {
+    font-size: 1rem;
+  }
+}

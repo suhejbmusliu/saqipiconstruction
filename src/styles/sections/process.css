@@ -1,0 +1,121 @@
+/* ===== PROCESS SECTION ===== */
+
+.process {
+  padding: 5rem;
+  color: var(--color-text);
+}
+
+.process__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.process__eyebrow {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+}
+
+.process__title {
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* row with 4 items */
+.process__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* wrapper = item + arrow */
+.process__item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* single item */
+.process__item {
+  max-width: 230px;
+  text-align: left;
+}
+
+.process__icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.process__icon {
+  width: 56px;    /* adjust to your real icon size */
+  height: 56px;
+  object-fit: contain;
+}
+
+.process__item-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+}
+
+.process__item-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* arrow between items */
+.process__arrow {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Medium screens: allow wrapping but keep row feeling */
+@media (max-width: 1024px) {
+  .process__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2.5rem;
+  }
+
+  .process__item-wrapper {
+    gap: 1rem;
+  }
+
+  .process__item {
+    max-width: 260px;
+  }
+}
+
+/* Mobile: stack items in a column, hide arrows */
+@media (max-width: 768px) {
+  .process__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process__item-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process__item {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .process__item-title {
+    text-align: center;
+  }
+
+  .process__arrow {
+    display: none;
+  }
+}

@@ -1,0 +1,130 @@
+/* ===== GALLERY SECTION ===== */
+
+.gallery {
+  background-color: #000000;
+  padding: 3rem 0 4rem;
+}
+
+.gallery__title {
+  text-align: left;
+  font-size: 1.4rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+}
+
+/* viewport: hides overflow */
+.gallery__viewport {
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+/* track: auto sliding row with loop */
+.gallery__track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: gallery-scroll 30s linear infinite;
+}
+
+/* pause animation when hovered */
+.gallery__viewport:hover .gallery__track {
+  animation-play-state: paused;
+}
+
+/* each image item */
+.gallery__item {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  flex: 0 0 auto;
+}
+
+.gallery__img {
+  display: block;
+  width: 210px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery__item:hover .gallery__img {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.8);
+}
+
+/* infinite horizontal sliding */
+@keyframes gallery-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== LIGHTBOX / MODAL ===== */
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 80;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal__content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.gallery-modal__img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-modal__close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .gallery__img {
+    width: 180px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery__title {
+    text-align: center;
+  }
+
+  .gallery__viewport {
+    padding-inline: 1.5rem;
+  }
+
+  .gallery__img {
+    width: 160px;
+    height: 240px;
+  }
+}

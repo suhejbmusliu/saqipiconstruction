@@ -1,0 +1,61 @@
+/* ===== FEATURED PROJECTS SECTION ===== */
+
+.featured {
+  background-color: #000000;
+  padding: 3.5rem 0 4rem;
+}
+
+.featured__title {
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 2.5rem;
+}
+
+/* logos row */
+.featured__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap; /* keeps it nice on smaller screens */
+}
+
+.featured__logo-wrapper {
+  flex: 0 0 auto;
+}
+
+.featured__logo {
+  max-width: 260px;
+  height: auto;
+  display: block;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 1024px) {
+  .featured__logos {
+    gap: 3rem;
+  }
+
+  .featured__logo {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured__title {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .featured__logos {
+    flex-direction: column; /* stack but still centered */
+    gap: 4rem;
+  }
+
+  .featured__logo {
+    max-width: 280px;
+  }
+}
