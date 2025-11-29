@@ -62,11 +62,7 @@ export const processSteps = [
   },
 ];
 
-export const stats = [
-  { label: "PROJEKTE", value: "300+" },
-  { label: "EXPERIENCË", value: "24+" },
-  { label: "PUNTORË", value: "50+" },
-];
+;
 
 export const projectsLogos = [
   { name: "PREMIUM PALACE" },
@@ -117,7 +113,7 @@ export const aboutContent = {
 
 
 // STATS SECTION
-import statsBg from "../assets/img/Bannerimg.jpg";
+import statsBg from "../assets/img/img2.jpg";
 
 export const statsSection = {
   background: statsBg,
@@ -127,6 +123,7 @@ export const statsSection = {
     { id: 3, value: 50,  suffix: "+", label: "PUNTORË" },
   ],
 };
+
 
 
 // FEATURED PROJECTS / MAIN BUILDINGS

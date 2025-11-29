@@ -1,5 +1,5 @@
 // src/sections/Hero.jsx
-import bannerImg from "../assets/img/Bannerimg.jpg";
+import bannerImg from "../assets/img/img2.jpg";
 import "../styles/sections/hero.css";
 import SplitText from "../components/animations/SplitText";
 
