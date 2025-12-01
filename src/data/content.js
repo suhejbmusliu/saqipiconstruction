@@ -176,7 +176,7 @@ import contactImg from "../assets/img/Contactimg.jpg";
 export const contactInfo = {
   title: "Na Kontaktoni",
   phone: "+381631115523",
-  email: "emailexample@gmail.com",
-  address: "Adress b13 example",
+  email: "saqipi@gmail.com",
+  address: "Rahovic Preshevë",
   image: contactImg,
 };
